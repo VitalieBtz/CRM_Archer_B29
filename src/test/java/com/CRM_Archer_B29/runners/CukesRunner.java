@@ -15,6 +15,7 @@ import org.junit.runner.RunWith;
                 "html:target/cucumber-reports.html",
                 "rerun:target/rerun.txt",
                 "me.jvt.cucumber.report.PrettyReports:target/cucumber",
+                "json:target/cucumber.json",
                 //"pretty"
         },
         publish = true, // generates a report with public link
