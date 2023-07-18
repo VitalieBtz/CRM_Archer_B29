@@ -41,10 +41,9 @@ $(document).ready(function() {
 
 
 
-<title>Cucumber Reports  - Failures Overview</title>
+<title>Cucumber Reports  - Tag: @message1</title>
 
 </head>
-
 <body>
 
 <nav class="navbar navbar-default navbar-fixed-top" id="navigation">
@@ -55,7 +54,7 @@ $(document).ready(function() {
         <li role="presentation" ><a href="overview-features.html">Features</a></li>
         <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
         <li role="presentation" ><a href="overview-steps.html">Steps</a></li>
-        <li role="presentation"  class="active" ><a href="overview-failures.html">Failures</a></li>
+        <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
       </ul>
     </div>
   </div>
@@ -75,7 +74,7 @@ $(document).ready(function() {
   <tbody>
     <tr class="info">
       <td>No Name (add projectName to cucumber-reporting.properties)</td>
-      <td>18 Jul 2023, 15:18</td>
+      <td>18 Jul 2023, 14:08</td>
     </tr>
   </tbody>
 </table>
@@ -88,10 +87,67 @@ $(document).ready(function() {
 
 <div id="report-lead" class="container-fluid">
   <div class="col-md-10 col-md-offset-1">
-    <h2>Failures Overview</h2>
-      <p>The following summary displays scenarios that failed.</p>
+    <h2>Tag Report</h2>
   </div>
 </div>
+
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table class="stats-table">
+
+
+<thead>
+  <tr class="header dont-sort">
+      <th></th>
+    <th colspan="6">Steps</th>
+    <th colspan="3">Scenarios</th>
+    <th colspan="2">Features</th>
+  </tr>
+  <tr>
+    <th>Tag</th>
+    <th class="passed">Passed</th>
+    <th class="failed">Failed</th>
+    <th class="skipped">Skipped</th>
+    <th class="pending">Pending</th>
+    <th class="undefined">Undefined</th>
+    <th class="total">Total</th>
+
+    <th class="passed">Passed</th>
+    <th class="failed">Failed</th>
+    <th class="total">Total</th>
+
+    <th>Duration</th>
+    <th>Status</th>
+  </tr>
+</thead>
+
+
+        <tbody>
+        <tr>
+          <td class="tagname">@message1</td>
+          <td      class="passed"    >14</td>
+          <td      class="failed"    >7</td>
+          <td >0</td>
+          <td >0</td>
+          <td >0</td>
+          <td class="total">21</td>
+
+          <td >0</td>
+          <td  class="failed"    >7</td>
+          <td class="total">7</td>
+
+          <td class="duration" data-value="7451271000">7.451</td>
+          <td class="failed">Failed</td>
+        </tr>
+        </tbody>
+
+      </table>
+    </div>
+  </div>
+</div>
+
 
 
 <div class="container-fluid">
@@ -109,31 +165,30 @@ $(document).ready(function() {
 <div class="container-fluid" id="report">
   <div class="row">
     <div class="col-md-10 col-md-offset-1">
+      <div class="elements">
 
-        <div class="elements">
 
 <div class="element">
     <div class="indention">
       <b>Feature:</b>
-      <a href="report-feature_3484223845.html">As a user, I should be able to login.</a>
+      <a href="report-feature_1764534172.html">As a user, I should be able to login.</a>
     </div>
 
 
 <div class="tags indention">
     <b>Tags:</b>
-       <a href="report-tag_1500847033.html">@B29G6-285</a>
-       <a href="report-tag_1500846966.html">@B29G6-260</a>
+       <a href="report-tag_1972420937.html">@message1</a>
 </div>
 
 
-  <span class="lead-duration duration">2.355</span>
+  <span class="lead-duration duration">1.356</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-1">
 
 <div class="brief failed">
   <span class="keyword indention">Scenario Outline</span>
-  <span class="name">US244_TC3-&quot;Please fill out this field&quot; error message should be displayed if the password or username is empty</span>
+  <span class="name">&quot;Please fill out this field&quot; error message should be displayed if the password or username is empty</span>
 
 
      <i class="chevron fa fa-fw"></i>
@@ -164,7 +219,7 @@ $(document).ready(function() {
             <span class="keyword indention">Before</span>
               <span class="location name">com.CRM_Archer_B29.step_definitions.Hooks.setupMethod()</span>
 
-  <span class="lead-duration duration">6.595</span>
+  <span class="lead-duration duration">11.264</span>
 
           </div>
 
@@ -201,7 +256,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">User enters only a  <span class="argument">&quot;hr4@cybertekschool.com&quot;</span> or <span class="argument">&quot;&quot;</span></span>
 
-  <span class="lead-duration duration">0.852</span>
+  <span class="lead-duration duration">0.693</span>
 
 </div>
 
@@ -228,7 +283,7 @@ $(document).ready(function() {
   <span class="keyword indention">And</span>
   <span class="name">User clicks login button</span>
 
-  <span class="lead-duration duration">1.350</span>
+  <span class="lead-duration duration">0.602</span>
 
 </div>
 
@@ -255,7 +310,7 @@ $(document).ready(function() {
   <span class="keyword indention">Then</span>
   <span class="name">User should see message Please fill out this field</span>
 
-  <span class="lead-duration duration">0.151</span>
+  <span class="lead-duration duration">0.060</span>
 
 </div>
 
@@ -273,8 +328,8 @@ $(document).ready(function() {
         <pre>org.junit.ComparisonFailure: expected:&lt;[Please fill out this fiel]d&gt; but was:&lt;[Incorrect login or passwor]d&gt;
 	at org.junit.Assert.assertEquals(Assert.java:117)
 	at org.junit.Assert.assertEquals(Assert.java:146)
-	at com.CRM_Archer_B29.step_definitions.Login_StepDef.userShouldSeeMessagePleaseFillOutThisField(Login_StepDef.java:69)
-	at &#10045;.User should see message Please fill out this field(file:///Users/vitavoloshchuk/IdeaProjects/CRM_Archer_B29/src/test/resources/features/logJira.feature:30)
+	at com.CRM_Archer_B29.step_definitions.Login_StepDef.userShouldSeeMessagePleaseFillOutThisField(Login_StepDef.java:68)
+	at &#10045;.User should see message Please fill out this field(file:///Users/vitavoloshchuk/IdeaProjects/CRM_Archer_B29/src/test/resources/features/Login.feature:50)
 </pre>
       </div>
     </div>
@@ -316,7 +371,7 @@ $(document).ready(function() {
             <span class="keyword indention">After</span>
               <span class="location name">com.CRM_Archer_B29.step_definitions.Hooks.teardownMethod(io.cucumber.java.Scenario)</span>
 
-  <span class="lead-duration duration">0.701</span>
+  <span class="lead-duration duration">1.029</span>
 
           </div>
 
@@ -328,14 +383,14 @@ $(document).ready(function() {
   <div class="embeddings inner-level">
   <div class="embedding indention">
     <div data-toggle="collapse" data-target="#embedding-6" class="collapsable-control">
-      <a>US244_TC3-&quot;Please fill out this field&quot; error message should be displayed if the password or username is empty</a>
-      <a href="embeddings/embedding_-323016417.png" download target="_blank">
+      <a>&quot;Please fill out this field&quot; error message should be displayed if the password or username is empty</a>
+      <a href="embeddings/embedding_54714790.png" download target="_blank">
         <span class="download-button glyphicon glyphicon-download-alt"></span>
       </a>
     </div>
     <div id="embedding-6" class="collapse collapsable-details ">
       <div class="embedding-content">
-        <img src="embeddings/embedding_-323016417.png">
+        <img src="embeddings/embedding_54714790.png">
       </div>
     </div>
   </div>
@@ -352,25 +407,24 @@ $(document).ready(function() {
 <div class="element">
     <div class="indention">
       <b>Feature:</b>
-      <a href="report-feature_3484223845.html">As a user, I should be able to login.</a>
+      <a href="report-feature_1764534172.html">As a user, I should be able to login.</a>
     </div>
 
 
 <div class="tags indention">
     <b>Tags:</b>
-       <a href="report-tag_1500847033.html">@B29G6-285</a>
-       <a href="report-tag_1500846966.html">@B29G6-260</a>
+       <a href="report-tag_1972420937.html">@message1</a>
 </div>
 
 
-  <span class="lead-duration duration">2.659</span>
+  <span class="lead-duration duration">0.950</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-7">
 
 <div class="brief failed">
   <span class="keyword indention">Scenario Outline</span>
-  <span class="name">US244_TC3-&quot;Please fill out this field&quot; error message should be displayed if the password or username is empty</span>
+  <span class="name">&quot;Please fill out this field&quot; error message should be displayed if the password or username is empty</span>
 
 
      <i class="chevron fa fa-fw"></i>
@@ -401,7 +455,7 @@ $(document).ready(function() {
             <span class="keyword indention">Before</span>
               <span class="location name">com.CRM_Archer_B29.step_definitions.Hooks.setupMethod()</span>
 
-  <span class="lead-duration duration">6.887</span>
+  <span class="lead-duration duration">6.322</span>
 
           </div>
 
@@ -438,7 +492,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">User enters only a  <span class="argument">&quot;hr5@cybertekschool.com&quot;</span> or <span class="argument">&quot;&quot;</span></span>
 
-  <span class="lead-duration duration">1.598</span>
+  <span class="lead-duration duration">0.536</span>
 
 </div>
 
@@ -465,7 +519,7 @@ $(document).ready(function() {
   <span class="keyword indention">And</span>
   <span class="name">User clicks login button</span>
 
-  <span class="lead-duration duration">0.914</span>
+  <span class="lead-duration duration">0.367</span>
 
 </div>
 
@@ -492,7 +546,7 @@ $(document).ready(function() {
   <span class="keyword indention">Then</span>
   <span class="name">User should see message Please fill out this field</span>
 
-  <span class="lead-duration duration">0.146</span>
+  <span class="lead-duration duration">0.046</span>
 
 </div>
 
@@ -510,8 +564,8 @@ $(document).ready(function() {
         <pre>org.junit.ComparisonFailure: expected:&lt;[Please fill out this fiel]d&gt; but was:&lt;[Incorrect login or passwor]d&gt;
 	at org.junit.Assert.assertEquals(Assert.java:117)
 	at org.junit.Assert.assertEquals(Assert.java:146)
-	at com.CRM_Archer_B29.step_definitions.Login_StepDef.userShouldSeeMessagePleaseFillOutThisField(Login_StepDef.java:69)
-	at &#10045;.User should see message Please fill out this field(file:///Users/vitavoloshchuk/IdeaProjects/CRM_Archer_B29/src/test/resources/features/logJira.feature:30)
+	at com.CRM_Archer_B29.step_definitions.Login_StepDef.userShouldSeeMessagePleaseFillOutThisField(Login_StepDef.java:68)
+	at &#10045;.User should see message Please fill out this field(file:///Users/vitavoloshchuk/IdeaProjects/CRM_Archer_B29/src/test/resources/features/Login.feature:50)
 </pre>
       </div>
     </div>
@@ -553,7 +607,7 @@ $(document).ready(function() {
             <span class="keyword indention">After</span>
               <span class="location name">com.CRM_Archer_B29.step_definitions.Hooks.teardownMethod(io.cucumber.java.Scenario)</span>
 
-  <span class="lead-duration duration">1.287</span>
+  <span class="lead-duration duration">0.495</span>
 
           </div>
 
@@ -565,14 +619,14 @@ $(document).ready(function() {
   <div class="embeddings inner-level">
   <div class="embedding indention">
     <div data-toggle="collapse" data-target="#embedding-12" class="collapsable-control">
-      <a>US244_TC3-&quot;Please fill out this field&quot; error message should be displayed if the password or username is empty</a>
-      <a href="embeddings/embedding_-1675474819.png" download target="_blank">
+      <a>&quot;Please fill out this field&quot; error message should be displayed if the password or username is empty</a>
+      <a href="embeddings/embedding_422595394.png" download target="_blank">
         <span class="download-button glyphicon glyphicon-download-alt"></span>
       </a>
     </div>
     <div id="embedding-12" class="collapse collapsable-details ">
       <div class="embedding-content">
-        <img src="embeddings/embedding_-1675474819.png">
+        <img src="embeddings/embedding_422595394.png">
       </div>
     </div>
   </div>
@@ -589,25 +643,24 @@ $(document).ready(function() {
 <div class="element">
     <div class="indention">
       <b>Feature:</b>
-      <a href="report-feature_3484223845.html">As a user, I should be able to login.</a>
+      <a href="report-feature_1764534172.html">As a user, I should be able to login.</a>
     </div>
 
 
 <div class="tags indention">
     <b>Tags:</b>
-       <a href="report-tag_1500847033.html">@B29G6-285</a>
-       <a href="report-tag_1500846966.html">@B29G6-260</a>
+       <a href="report-tag_1972420937.html">@message1</a>
 </div>
 
 
-  <span class="lead-duration duration">1.391</span>
+  <span class="lead-duration duration">1.076</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-13">
 
 <div class="brief failed">
   <span class="keyword indention">Scenario Outline</span>
-  <span class="name">US244_TC3-&quot;Please fill out this field&quot; error message should be displayed if the password or username is empty</span>
+  <span class="name">&quot;Please fill out this field&quot; error message should be displayed if the password or username is empty</span>
 
 
      <i class="chevron fa fa-fw"></i>
@@ -638,7 +691,7 @@ $(document).ready(function() {
             <span class="keyword indention">Before</span>
               <span class="location name">com.CRM_Archer_B29.step_definitions.Hooks.setupMethod()</span>
 
-  <span class="lead-duration duration">7.375</span>
+  <span class="lead-duration duration">5.911</span>
 
           </div>
 
@@ -675,7 +728,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">User enters only a  <span class="argument">&quot;&quot;</span> or <span class="argument">&quot;UserUser&quot;</span></span>
 
-  <span class="lead-duration duration">0.729</span>
+  <span class="lead-duration duration">0.506</span>
 
 </div>
 
@@ -702,7 +755,7 @@ $(document).ready(function() {
   <span class="keyword indention">And</span>
   <span class="name">User clicks login button</span>
 
-  <span class="lead-duration duration">0.597</span>
+  <span class="lead-duration duration">0.508</span>
 
 </div>
 
@@ -729,7 +782,7 @@ $(document).ready(function() {
   <span class="keyword indention">Then</span>
   <span class="name">User should see message Please fill out this field</span>
 
-  <span class="lead-duration duration">0.064</span>
+  <span class="lead-duration duration">0.062</span>
 
 </div>
 
@@ -747,8 +800,8 @@ $(document).ready(function() {
         <pre>org.junit.ComparisonFailure: expected:&lt;[Please fill out this fiel]d&gt; but was:&lt;[Incorrect login or passwor]d&gt;
 	at org.junit.Assert.assertEquals(Assert.java:117)
 	at org.junit.Assert.assertEquals(Assert.java:146)
-	at com.CRM_Archer_B29.step_definitions.Login_StepDef.userShouldSeeMessagePleaseFillOutThisField(Login_StepDef.java:69)
-	at &#10045;.User should see message Please fill out this field(file:///Users/vitavoloshchuk/IdeaProjects/CRM_Archer_B29/src/test/resources/features/logJira.feature:30)
+	at com.CRM_Archer_B29.step_definitions.Login_StepDef.userShouldSeeMessagePleaseFillOutThisField(Login_StepDef.java:68)
+	at &#10045;.User should see message Please fill out this field(file:///Users/vitavoloshchuk/IdeaProjects/CRM_Archer_B29/src/test/resources/features/Login.feature:50)
 </pre>
       </div>
     </div>
@@ -790,7 +843,7 @@ $(document).ready(function() {
             <span class="keyword indention">After</span>
               <span class="location name">com.CRM_Archer_B29.step_definitions.Hooks.teardownMethod(io.cucumber.java.Scenario)</span>
 
-  <span class="lead-duration duration">0.590</span>
+  <span class="lead-duration duration">0.488</span>
 
           </div>
 
@@ -802,14 +855,14 @@ $(document).ready(function() {
   <div class="embeddings inner-level">
   <div class="embedding indention">
     <div data-toggle="collapse" data-target="#embedding-18" class="collapsable-control">
-      <a>US244_TC3-&quot;Please fill out this field&quot; error message should be displayed if the password or username is empty</a>
-      <a href="embeddings/embedding_-323016417.png" download target="_blank">
+      <a>&quot;Please fill out this field&quot; error message should be displayed if the password or username is empty</a>
+      <a href="embeddings/embedding_422595394.png" download target="_blank">
         <span class="download-button glyphicon glyphicon-download-alt"></span>
       </a>
     </div>
     <div id="embedding-18" class="collapse collapsable-details ">
       <div class="embedding-content">
-        <img src="embeddings/embedding_-323016417.png">
+        <img src="embeddings/embedding_422595394.png">
       </div>
     </div>
   </div>
@@ -826,25 +879,24 @@ $(document).ready(function() {
 <div class="element">
     <div class="indention">
       <b>Feature:</b>
-      <a href="report-feature_3484223845.html">As a user, I should be able to login.</a>
+      <a href="report-feature_1764534172.html">As a user, I should be able to login.</a>
     </div>
 
 
 <div class="tags indention">
     <b>Tags:</b>
-       <a href="report-tag_1500847033.html">@B29G6-285</a>
-       <a href="report-tag_1500846966.html">@B29G6-260</a>
+       <a href="report-tag_1972420937.html">@message1</a>
 </div>
 
 
-  <span class="lead-duration duration">2.084</span>
+  <span class="lead-duration duration">1.016</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-19">
 
 <div class="brief failed">
   <span class="keyword indention">Scenario Outline</span>
-  <span class="name">US244_TC3-&quot;Please fill out this field&quot; error message should be displayed if the password or username is empty</span>
+  <span class="name">&quot;Please fill out this field&quot; error message should be displayed if the password or username is empty</span>
 
 
      <i class="chevron fa fa-fw"></i>
@@ -875,7 +927,7 @@ $(document).ready(function() {
             <span class="keyword indention">Before</span>
               <span class="location name">com.CRM_Archer_B29.step_definitions.Hooks.setupMethod()</span>
 
-  <span class="lead-duration duration">6.175</span>
+  <span class="lead-duration duration">5.781</span>
 
           </div>
 
@@ -912,7 +964,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">User enters only a  <span class="argument">&quot;&quot;</span> or <span class="argument">&quot;User1User&quot;</span></span>
 
-  <span class="lead-duration duration">1.029</span>
+  <span class="lead-duration duration">0.474</span>
 
 </div>
 
@@ -939,7 +991,7 @@ $(document).ready(function() {
   <span class="keyword indention">And</span>
   <span class="name">User clicks login button</span>
 
-  <span class="lead-duration duration">0.933</span>
+  <span class="lead-duration duration">0.494</span>
 
 </div>
 
@@ -966,7 +1018,7 @@ $(document).ready(function() {
   <span class="keyword indention">Then</span>
   <span class="name">User should see message Please fill out this field</span>
 
-  <span class="lead-duration duration">0.120</span>
+  <span class="lead-duration duration">0.046</span>
 
 </div>
 
@@ -984,8 +1036,8 @@ $(document).ready(function() {
         <pre>org.junit.ComparisonFailure: expected:&lt;[Please fill out this fiel]d&gt; but was:&lt;[Incorrect login or passwor]d&gt;
 	at org.junit.Assert.assertEquals(Assert.java:117)
 	at org.junit.Assert.assertEquals(Assert.java:146)
-	at com.CRM_Archer_B29.step_definitions.Login_StepDef.userShouldSeeMessagePleaseFillOutThisField(Login_StepDef.java:69)
-	at &#10045;.User should see message Please fill out this field(file:///Users/vitavoloshchuk/IdeaProjects/CRM_Archer_B29/src/test/resources/features/logJira.feature:30)
+	at com.CRM_Archer_B29.step_definitions.Login_StepDef.userShouldSeeMessagePleaseFillOutThisField(Login_StepDef.java:68)
+	at &#10045;.User should see message Please fill out this field(file:///Users/vitavoloshchuk/IdeaProjects/CRM_Archer_B29/src/test/resources/features/Login.feature:50)
 </pre>
       </div>
     </div>
@@ -1027,7 +1079,7 @@ $(document).ready(function() {
             <span class="keyword indention">After</span>
               <span class="location name">com.CRM_Archer_B29.step_definitions.Hooks.teardownMethod(io.cucumber.java.Scenario)</span>
 
-  <span class="lead-duration duration">1.299</span>
+  <span class="lead-duration duration">0.446</span>
 
           </div>
 
@@ -1039,14 +1091,14 @@ $(document).ready(function() {
   <div class="embeddings inner-level">
   <div class="embedding indention">
     <div data-toggle="collapse" data-target="#embedding-24" class="collapsable-control">
-      <a>US244_TC3-&quot;Please fill out this field&quot; error message should be displayed if the password or username is empty</a>
-      <a href="embeddings/embedding_-323016417.png" download target="_blank">
+      <a>&quot;Please fill out this field&quot; error message should be displayed if the password or username is empty</a>
+      <a href="embeddings/embedding_422595394.png" download target="_blank">
         <span class="download-button glyphicon glyphicon-download-alt"></span>
       </a>
     </div>
     <div id="embedding-24" class="collapse collapsable-details ">
       <div class="embedding-content">
-        <img src="embeddings/embedding_-323016417.png">
+        <img src="embeddings/embedding_422595394.png">
       </div>
     </div>
   </div>
@@ -1063,25 +1115,24 @@ $(document).ready(function() {
 <div class="element">
     <div class="indention">
       <b>Feature:</b>
-      <a href="report-feature_3484223845.html">As a user, I should be able to login.</a>
+      <a href="report-feature_1764534172.html">As a user, I should be able to login.</a>
     </div>
 
 
 <div class="tags indention">
     <b>Tags:</b>
-       <a href="report-tag_1500847033.html">@B29G6-285</a>
-       <a href="report-tag_1500846966.html">@B29G6-260</a>
+       <a href="report-tag_1972420937.html">@message1</a>
 </div>
 
 
-  <span class="lead-duration duration">1.726</span>
+  <span class="lead-duration duration">1.066</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-25">
 
 <div class="brief failed">
   <span class="keyword indention">Scenario Outline</span>
-  <span class="name">US244_TC3-&quot;Please fill out this field&quot; error message should be displayed if the password or username is empty</span>
+  <span class="name">&quot;Please fill out this field&quot; error message should be displayed if the password or username is empty</span>
 
 
      <i class="chevron fa fa-fw"></i>
@@ -1112,7 +1163,7 @@ $(document).ready(function() {
             <span class="keyword indention">Before</span>
               <span class="location name">com.CRM_Archer_B29.step_definitions.Hooks.setupMethod()</span>
 
-  <span class="lead-duration duration">11.918</span>
+  <span class="lead-duration duration">6.115</span>
 
           </div>
 
@@ -1149,7 +1200,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">User enters only a  <span class="argument">&quot;marketing102@cybertekschool.com&quot;</span> or <span class="argument">&quot;&quot;</span></span>
 
-  <span class="lead-duration duration">0.957</span>
+  <span class="lead-duration duration">0.523</span>
 
 </div>
 
@@ -1176,7 +1227,7 @@ $(document).ready(function() {
   <span class="keyword indention">And</span>
   <span class="name">User clicks login button</span>
 
-  <span class="lead-duration duration">0.635</span>
+  <span class="lead-duration duration">0.499</span>
 
 </div>
 
@@ -1203,7 +1254,7 @@ $(document).ready(function() {
   <span class="keyword indention">Then</span>
   <span class="name">User should see message Please fill out this field</span>
 
-  <span class="lead-duration duration">0.133</span>
+  <span class="lead-duration duration">0.044</span>
 
 </div>
 
@@ -1221,8 +1272,8 @@ $(document).ready(function() {
         <pre>org.junit.ComparisonFailure: expected:&lt;[Please fill out this fiel]d&gt; but was:&lt;[Incorrect login or passwor]d&gt;
 	at org.junit.Assert.assertEquals(Assert.java:117)
 	at org.junit.Assert.assertEquals(Assert.java:146)
-	at com.CRM_Archer_B29.step_definitions.Login_StepDef.userShouldSeeMessagePleaseFillOutThisField(Login_StepDef.java:69)
-	at &#10045;.User should see message Please fill out this field(file:///Users/vitavoloshchuk/IdeaProjects/CRM_Archer_B29/src/test/resources/features/logJira.feature:30)
+	at com.CRM_Archer_B29.step_definitions.Login_StepDef.userShouldSeeMessagePleaseFillOutThisField(Login_StepDef.java:68)
+	at &#10045;.User should see message Please fill out this field(file:///Users/vitavoloshchuk/IdeaProjects/CRM_Archer_B29/src/test/resources/features/Login.feature:50)
 </pre>
       </div>
     </div>
@@ -1264,7 +1315,7 @@ $(document).ready(function() {
             <span class="keyword indention">After</span>
               <span class="location name">com.CRM_Archer_B29.step_definitions.Hooks.teardownMethod(io.cucumber.java.Scenario)</span>
 
-  <span class="lead-duration duration">0.708</span>
+  <span class="lead-duration duration">0.424</span>
 
           </div>
 
@@ -1276,14 +1327,14 @@ $(document).ready(function() {
   <div class="embeddings inner-level">
   <div class="embedding indention">
     <div data-toggle="collapse" data-target="#embedding-30" class="collapsable-control">
-      <a>US244_TC3-&quot;Please fill out this field&quot; error message should be displayed if the password or username is empty</a>
-      <a href="embeddings/embedding_-323016417.png" download target="_blank">
+      <a>&quot;Please fill out this field&quot; error message should be displayed if the password or username is empty</a>
+      <a href="embeddings/embedding_422595394.png" download target="_blank">
         <span class="download-button glyphicon glyphicon-download-alt"></span>
       </a>
     </div>
     <div id="embedding-30" class="collapse collapsable-details ">
       <div class="embedding-content">
-        <img src="embeddings/embedding_-323016417.png">
+        <img src="embeddings/embedding_422595394.png">
       </div>
     </div>
   </div>
@@ -1300,25 +1351,24 @@ $(document).ready(function() {
 <div class="element">
     <div class="indention">
       <b>Feature:</b>
-      <a href="report-feature_3484223845.html">As a user, I should be able to login.</a>
+      <a href="report-feature_1764534172.html">As a user, I should be able to login.</a>
     </div>
 
 
 <div class="tags indention">
     <b>Tags:</b>
-       <a href="report-tag_1500847033.html">@B29G6-285</a>
-       <a href="report-tag_1500846966.html">@B29G6-260</a>
+       <a href="report-tag_1972420937.html">@message1</a>
 </div>
 
 
-  <span class="lead-duration duration">1.448</span>
+  <span class="lead-duration duration">1.047</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-31">
 
 <div class="brief failed">
   <span class="keyword indention">Scenario Outline</span>
-  <span class="name">US244_TC3-&quot;Please fill out this field&quot; error message should be displayed if the password or username is empty</span>
+  <span class="name">&quot;Please fill out this field&quot; error message should be displayed if the password or username is empty</span>
 
 
      <i class="chevron fa fa-fw"></i>
@@ -1349,7 +1399,7 @@ $(document).ready(function() {
             <span class="keyword indention">Before</span>
               <span class="location name">com.CRM_Archer_B29.step_definitions.Hooks.setupMethod()</span>
 
-  <span class="lead-duration duration">7.944</span>
+  <span class="lead-duration duration">5.539</span>
 
           </div>
 
@@ -1386,7 +1436,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">User enters only a  <span class="argument">&quot;&quot;</span> or <span class="argument">&quot;3@UserUser&quot;</span></span>
 
-  <span class="lead-duration duration">0.746</span>
+  <span class="lead-duration duration">0.479</span>
 
 </div>
 
@@ -1413,7 +1463,7 @@ $(document).ready(function() {
   <span class="keyword indention">And</span>
   <span class="name">User clicks login button</span>
 
-  <span class="lead-duration duration">0.631</span>
+  <span class="lead-duration duration">0.521</span>
 
 </div>
 
@@ -1440,7 +1490,7 @@ $(document).ready(function() {
   <span class="keyword indention">Then</span>
   <span class="name">User should see message Please fill out this field</span>
 
-  <span class="lead-duration duration">0.070</span>
+  <span class="lead-duration duration">0.046</span>
 
 </div>
 
@@ -1458,8 +1508,8 @@ $(document).ready(function() {
         <pre>org.junit.ComparisonFailure: expected:&lt;[Please fill out this fiel]d&gt; but was:&lt;[Incorrect login or passwor]d&gt;
 	at org.junit.Assert.assertEquals(Assert.java:117)
 	at org.junit.Assert.assertEquals(Assert.java:146)
-	at com.CRM_Archer_B29.step_definitions.Login_StepDef.userShouldSeeMessagePleaseFillOutThisField(Login_StepDef.java:69)
-	at &#10045;.User should see message Please fill out this field(file:///Users/vitavoloshchuk/IdeaProjects/CRM_Archer_B29/src/test/resources/features/logJira.feature:30)
+	at com.CRM_Archer_B29.step_definitions.Login_StepDef.userShouldSeeMessagePleaseFillOutThisField(Login_StepDef.java:68)
+	at &#10045;.User should see message Please fill out this field(file:///Users/vitavoloshchuk/IdeaProjects/CRM_Archer_B29/src/test/resources/features/Login.feature:50)
 </pre>
       </div>
     </div>
@@ -1501,7 +1551,7 @@ $(document).ready(function() {
             <span class="keyword indention">After</span>
               <span class="location name">com.CRM_Archer_B29.step_definitions.Hooks.teardownMethod(io.cucumber.java.Scenario)</span>
 
-  <span class="lead-duration duration">0.613</span>
+  <span class="lead-duration duration">0.445</span>
 
           </div>
 
@@ -1513,14 +1563,14 @@ $(document).ready(function() {
   <div class="embeddings inner-level">
   <div class="embedding indention">
     <div data-toggle="collapse" data-target="#embedding-36" class="collapsable-control">
-      <a>US244_TC3-&quot;Please fill out this field&quot; error message should be displayed if the password or username is empty</a>
-      <a href="embeddings/embedding_-323016417.png" download target="_blank">
+      <a>&quot;Please fill out this field&quot; error message should be displayed if the password or username is empty</a>
+      <a href="embeddings/embedding_422595394.png" download target="_blank">
         <span class="download-button glyphicon glyphicon-download-alt"></span>
       </a>
     </div>
     <div id="embedding-36" class="collapse collapsable-details ">
       <div class="embedding-content">
-        <img src="embeddings/embedding_-323016417.png">
+        <img src="embeddings/embedding_422595394.png">
       </div>
     </div>
   </div>
@@ -1537,25 +1587,24 @@ $(document).ready(function() {
 <div class="element">
     <div class="indention">
       <b>Feature:</b>
-      <a href="report-feature_3484223845.html">As a user, I should be able to login.</a>
+      <a href="report-feature_1764534172.html">As a user, I should be able to login.</a>
     </div>
 
 
 <div class="tags indention">
     <b>Tags:</b>
-       <a href="report-tag_1500847033.html">@B29G6-285</a>
-       <a href="report-tag_1500846966.html">@B29G6-260</a>
+       <a href="report-tag_1972420937.html">@message1</a>
 </div>
 
 
-  <span class="lead-duration duration">1.322</span>
+  <span class="lead-duration duration">0.936</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-37">
 
 <div class="brief failed">
   <span class="keyword indention">Scenario Outline</span>
-  <span class="name">US244_TC3-&quot;Please fill out this field&quot; error message should be displayed if the password or username is empty</span>
+  <span class="name">&quot;Please fill out this field&quot; error message should be displayed if the password or username is empty</span>
 
 
      <i class="chevron fa fa-fw"></i>
@@ -1586,7 +1635,7 @@ $(document).ready(function() {
             <span class="keyword indention">Before</span>
               <span class="location name">com.CRM_Archer_B29.step_definitions.Hooks.setupMethod()</span>
 
-  <span class="lead-duration duration">7.120</span>
+  <span class="lead-duration duration">5.143</span>
 
           </div>
 
@@ -1623,7 +1672,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">User enters only a  <span class="argument">&quot;marketing301@cybertekschool.com&quot;</span> or <span class="argument">&quot;&quot;</span></span>
 
-  <span class="lead-duration duration">0.745</span>
+  <span class="lead-duration duration">0.505</span>
 
 </div>
 
@@ -1650,7 +1699,7 @@ $(document).ready(function() {
   <span class="keyword indention">And</span>
   <span class="name">User clicks login button</span>
 
-  <span class="lead-duration duration">0.511</span>
+  <span class="lead-duration duration">0.386</span>
 
 </div>
 
@@ -1677,7 +1726,7 @@ $(document).ready(function() {
   <span class="keyword indention">Then</span>
   <span class="name">User should see message Please fill out this field</span>
 
-  <span class="lead-duration duration">0.065</span>
+  <span class="lead-duration duration">0.044</span>
 
 </div>
 
@@ -1695,8 +1744,8 @@ $(document).ready(function() {
         <pre>org.junit.ComparisonFailure: expected:&lt;[Please fill out this fiel]d&gt; but was:&lt;[Incorrect login or passwor]d&gt;
 	at org.junit.Assert.assertEquals(Assert.java:117)
 	at org.junit.Assert.assertEquals(Assert.java:146)
-	at com.CRM_Archer_B29.step_definitions.Login_StepDef.userShouldSeeMessagePleaseFillOutThisField(Login_StepDef.java:69)
-	at &#10045;.User should see message Please fill out this field(file:///Users/vitavoloshchuk/IdeaProjects/CRM_Archer_B29/src/test/resources/features/logJira.feature:30)
+	at com.CRM_Archer_B29.step_definitions.Login_StepDef.userShouldSeeMessagePleaseFillOutThisField(Login_StepDef.java:68)
+	at &#10045;.User should see message Please fill out this field(file:///Users/vitavoloshchuk/IdeaProjects/CRM_Archer_B29/src/test/resources/features/Login.feature:50)
 </pre>
       </div>
     </div>
@@ -1738,7 +1787,7 @@ $(document).ready(function() {
             <span class="keyword indention">After</span>
               <span class="location name">com.CRM_Archer_B29.step_definitions.Hooks.teardownMethod(io.cucumber.java.Scenario)</span>
 
-  <span class="lead-duration duration">0.606</span>
+  <span class="lead-duration duration">0.448</span>
 
           </div>
 
@@ -1750,14 +1799,14 @@ $(document).ready(function() {
   <div class="embeddings inner-level">
   <div class="embedding indention">
     <div data-toggle="collapse" data-target="#embedding-42" class="collapsable-control">
-      <a>US244_TC3-&quot;Please fill out this field&quot; error message should be displayed if the password or username is empty</a>
-      <a href="embeddings/embedding_-323016417.png" download target="_blank">
+      <a>&quot;Please fill out this field&quot; error message should be displayed if the password or username is empty</a>
+      <a href="embeddings/embedding_422595394.png" download target="_blank">
         <span class="download-button glyphicon glyphicon-download-alt"></span>
       </a>
     </div>
     <div id="embedding-42" class="collapse collapsable-details ">
       <div class="embedding-content">
-        <img src="embeddings/embedding_-323016417.png">
+        <img src="embeddings/embedding_422595394.png">
       </div>
     </div>
   </div>
@@ -1770,8 +1819,8 @@ $(document).ready(function() {
   </div>
 </div>
 
-        </div>
 
+      </div>
     </div>
   </div>
 </div>
