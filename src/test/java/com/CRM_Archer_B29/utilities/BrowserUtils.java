@@ -27,6 +27,24 @@ public class BrowserUtils {
         }
     }
 
+    public static void switchWindowAndVerify(String expectedInTitle) {
+
+        //Return and store all window handles in a Set.
+        Set<String> windowHandles = Driver.getDriver().getWindowHandles();
+
+        for (String eachWindowHandle : windowHandles) {
+
+            Driver.getDriver().switchTo().window(eachWindowHandle);
+
+            if (Driver.getDriver().getTitle().contains(expectedInTitle)) {
+                break;
+            }
+        }
+
+        String actualTitle = Driver.getDriver().getTitle();
+        Assert.assertTrue(actualTitle.contains(expectedInTitle));
+
+    }
     public static void switchWindowAndVerify(String expectedInUrl, String expectedInTitle) {
 
         //Return and store all window handles in a Set.
@@ -80,5 +98,10 @@ public class BrowserUtils {
 
         //use the 'wait' object with the proper syntax to create explicit wait conditions.
         wait.until(ExpectedConditions.titleContains(title));
+    }
+
+    public static WebElement waitForVisibility(WebElement element, int time) {
+        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(time));
+        return wait.until(ExpectedConditions.visibilityOf(element));
     }
 }
