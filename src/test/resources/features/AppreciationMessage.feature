@@ -5,7 +5,9 @@ Feature: Appreciation message functionality
 
   Background:
     Given user is on the login page
-    When user enters "username" to login
+    When User enters a valid "<username>" and "<password>"
+    And User clicks login button
+    Then User should land on a home page
     Then user clicks on MORE module
     And user clicks Appreciation
 

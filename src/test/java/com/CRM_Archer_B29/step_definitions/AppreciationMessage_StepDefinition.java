@@ -5,10 +5,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class AppreciationMessage_StepDefinition {
-    @When("user enters {string} to login")
-    public void user_enters_to_login(String string) {
 
-    }
 
     @Then("user clicks on MORE module")
     public void userClicksOnMOREModule() {
