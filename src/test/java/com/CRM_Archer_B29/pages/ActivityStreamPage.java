@@ -32,4 +32,22 @@ public class ActivityStreamPage {
 
     @FindBy(xpath = "//button[@id='blog-submit-button-save']")
     public WebElement sendBtn;
+
+    @FindBy(xpath = "//span[@id='feed-add-post-form-link-text']")
+    public WebElement moreBtn;
+
+    @FindBy(xpath = "//span[.='Appreciation']")
+    public WebElement appreciationBtn;
+
+    @FindBy(xpath = "//span[@id='bx-b-uploadfile-blogPostForm']")
+    public WebElement uploadFileBtn;
+
+    @FindBy(xpath = "//input[@name='bxu_files[]']")
+    public WebElement uploadingField;
+
+    @FindBy(xpath = "//span[@class='insert-btn']")
+    public WebElement insertInTxtBtn;
+
+    @FindBy(xpath = "//span[@bx-bound='Y']")
+    public WebElement removeFileBtn;
 }
