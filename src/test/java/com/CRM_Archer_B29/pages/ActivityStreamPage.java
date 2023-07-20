@@ -37,7 +37,7 @@ public class ActivityStreamPage {
     @FindBy(xpath = "//span[@id='feed-add-post-form-link-text']")
     public WebElement moreModule;
 
-    @FindBy(xpath="(//span[text()='Appreciation'])[2]")
+    @FindBy(xpath="//span[.='Appreciation']")
     public WebElement appreciationPopUp;
 
     @FindBy(xpath="//body[@contenteditable='true']")
