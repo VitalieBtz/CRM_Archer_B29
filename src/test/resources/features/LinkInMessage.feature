@@ -1,4 +1,4 @@
-@B29G6-305
+@B29G6-305 @smoke
 Feature: As a user, I should be able to add link in message.
 
 		#@B29G6-288

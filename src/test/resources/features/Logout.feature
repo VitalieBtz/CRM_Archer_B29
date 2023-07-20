@@ -1,4 +1,4 @@
-@B29G6-295
+@B29G6-295 @smoke
 Feature: Default
 
   Background:

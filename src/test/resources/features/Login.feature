@@ -1,4 +1,4 @@
-@B29G6-285
+@B29G6-285 @smoke
 Feature: As a user, I should be able to login.
 
   Background:

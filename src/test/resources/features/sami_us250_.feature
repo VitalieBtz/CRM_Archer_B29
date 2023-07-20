@@ -1,4 +1,4 @@
-@B29G6-272
+@B29G6-272 @smoke
 Feature: Default
 
 

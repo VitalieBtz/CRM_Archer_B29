@@ -21,7 +21,7 @@ Feature: As a user, I should be able to upload files and pictures while sending 
 		    And user clicks the Appreciation button
 		    And user clicks the Upload File button
 		    And user drags the chosen "<file>" into uploading field
-		    Then user should see the file uploaded in ready to be used
+	 	    Then user should see the file uploaded in ready to be used
 		    Examples:
 		      | user        | file                                   |
 		      | hr38        | C:\Users\daemo\Desktop\US255\DOCX.docx |
