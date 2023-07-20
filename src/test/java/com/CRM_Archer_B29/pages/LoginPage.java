@@ -6,11 +6,12 @@ import com.CRM_Archer_B29.utilities.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+
 import java.util.InputMismatchException;
 
 public class LoginPage {
 
-    public LoginPage(){
+    public LoginPage() {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
@@ -22,6 +23,7 @@ public class LoginPage {
 
     @FindBy(xpath = "//input[@class='login-btn']")
     public WebElement loginBtn;
+
     @FindBy(xpath = "//div[.='Incorrect login or password']")
     public WebElement errorMessage;
 
@@ -32,14 +34,14 @@ public class LoginPage {
     public WebElement hiddenPass;
 
 
-    public void simpleLogin(String username,String password){
+    public void simpleLogin(String username) {
 
         usernameBox.sendKeys(username);
-        passwordBox.sendKeys(password);
+        passwordBox.sendKeys(ConfigReader.getProperty("password"));
         loginBtn.click();
     }
 
-    public void login(String user){
+    public void login(String user) {
 
         user = user.replace(" ", "_");
         String username = ConfigReader.getProperty(user + "_username");
@@ -50,27 +52,28 @@ public class LoginPage {
         loginBtn.click();
     }
 
-
-    public void dynamicLogin(String user){
+    public void dynamicLogin(String user) {
         user = user + ConfigReader.getProperty("dynamicUsername");
+        String username = ConfigReader.getProperty(user + "_username");
 
         usernameBox.sendKeys(user);
         passwordBox.sendKeys(ConfigReader.getProperty("password"));
 
         loginBtn.click();
     }
-    public void allInLogin(String userType, String userNumber){
+
+    public void allInLogin(String userType, String userNumber) {
 
         int userNum = Integer.parseInt(userNumber);
 
         if (!(userType.equalsIgnoreCase("hr")
                 || userType.equalsIgnoreCase("helpdesk")
                 || userType.equalsIgnoreCase("marketing"))
-                || (userNum < 1 || userNum > 101)){
+                || (userNum < 1 || userNum > 101)) {
             throw new InputMismatchException("Invalid login arguments");
         }
 
-        if (userType.equalsIgnoreCase("hr")){
+        if (userType.equalsIgnoreCase("hr")) {
             usernameBox.sendKeys(userType + userNumber + ConfigReader.getProperty("dynamicUsername"));
             passwordBox.sendKeys(ConfigReader.getProperty("password"));
             loginBtn.click();
@@ -83,5 +86,10 @@ public class LoginPage {
             passwordBox.sendKeys(ConfigReader.getProperty("password"));
             loginBtn.click();
         }
+    }
+
+    public void loginWPass(String username, String password) {
+        usernameBox.sendKeys(username);
+        passwordBox.sendKeys(password);
     }
 }

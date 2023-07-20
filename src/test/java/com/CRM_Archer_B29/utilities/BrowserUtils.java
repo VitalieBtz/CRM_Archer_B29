@@ -3,12 +3,9 @@ package com.CRM_Archer_B29.utilities;
 import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Set;
 
 public class BrowserUtils {
@@ -30,6 +27,24 @@ public class BrowserUtils {
         }
     }
 
+    public static void switchWindowAndVerify(String expectedInTitle) {
+
+        //Return and store all window handles in a Set.
+        Set<String> windowHandles = Driver.getDriver().getWindowHandles();
+
+        for (String eachWindowHandle : windowHandles) {
+
+            Driver.getDriver().switchTo().window(eachWindowHandle);
+
+            if (Driver.getDriver().getTitle().contains(expectedInTitle)) {
+                break;
+            }
+        }
+
+        String actualTitle = Driver.getDriver().getTitle();
+        Assert.assertTrue(actualTitle.contains(expectedInTitle));
+
+    }
     public static void switchWindowAndVerify(String expectedInUrl, String expectedInTitle) {
 
         //Return and store all window handles in a Set.
@@ -85,7 +100,8 @@ public class BrowserUtils {
         wait.until(ExpectedConditions.titleContains(title));
     }
 
-
-
-
+    public static WebElement waitForVisibility(WebElement element, int time) {
+        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(time));
+        return wait.until(ExpectedConditions.visibilityOf(element));
+    }
 }
