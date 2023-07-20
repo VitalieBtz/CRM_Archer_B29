@@ -33,14 +33,15 @@ public class LoginPage {
 
     public void login(String user){
 
-       user = user.replace(" ", "_");
-       String username = ConfigReader.getProperty(user + "_username");
+        user = user.replace(" ", "_");
+        String username = ConfigReader.getProperty(user + "_username");
 
-       usernameBox.sendKeys(username);
-       passwordBox.sendKeys(ConfigReader.getProperty("password"));
+        usernameBox.sendKeys(username);
+        passwordBox.sendKeys(ConfigReader.getProperty("password"));
 
-       loginBtn.click();
+        loginBtn.click();
     }
+
 
     public void dynamicLogin(String user){
         user = user + ConfigReader.getProperty("dynamicUsername");
