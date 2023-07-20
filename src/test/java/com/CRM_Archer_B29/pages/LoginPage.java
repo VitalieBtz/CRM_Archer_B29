@@ -22,8 +22,7 @@ public class LoginPage {
 
     @FindBy(xpath = "//input[@class='login-btn']")
     public WebElement loginBtn;
-    @FindBy(xpath = "//div[@class='errortext']")
-    public WebElement IncortectLogin;
+
 
     public void simpleLogin(String username,String password){
 
