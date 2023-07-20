@@ -84,14 +84,7 @@ public class BrowserUtils {
         //use the 'wait' object with the proper syntax to create explicit wait conditions.
         wait.until(ExpectedConditions.titleContains(title));
     }
-    public static List<String> DropDownoptionsString(WebElement DropDown){
-        Select select=new Select(DropDown);
-        List<String>d=new ArrayList<>();
-        for (WebElement option : select.getOptions()) {
-            d.add(option.getText());
-        }
-        return d;
-    }
+
 
 
 

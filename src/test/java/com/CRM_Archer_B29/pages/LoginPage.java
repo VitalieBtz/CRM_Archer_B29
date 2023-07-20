@@ -22,6 +22,14 @@ public class LoginPage {
 
     @FindBy(xpath = "//input[@class='login-btn']")
     public WebElement loginBtn;
+    @FindBy(xpath = "//div[.='Incorrect login or password']")
+    public WebElement errorMessage;
+
+    @FindBy(xpath = "//label[.='Remember me on this computer']")
+    public WebElement rememberMe;
+
+    @FindBy(xpath = "//input[@type='password']")
+    public WebElement hiddenPass;
 
 
     public void simpleLogin(String username,String password){
