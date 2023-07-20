@@ -11,7 +11,8 @@ public class HomePage {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
-
+    @FindBy(xpath = "//span[normalize-space(text())='Activity Stream']")
+    public WebElement activityStreamBtn;
     @FindBy(id = "user-block")
     public WebElement UsertabOptions;
     @FindBy(xpath = "(//a[@class='menu-popup-item menu-popup-no-icon '])[3]")
