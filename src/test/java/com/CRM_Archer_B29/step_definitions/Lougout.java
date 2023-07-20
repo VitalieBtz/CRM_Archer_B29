@@ -21,7 +21,7 @@ public class Lougout {
     @Then("users can log out from the app after clicking the “Log out” button.")
     public void users_can_log_out_from_the_app_after_clicking_the_log_out_button() {
         page.UsertabOptions.click();
-        page.LogoutBtn.click();
+        page..click();
         Assert.assertTrue(loginPage.loginBtn.isDisplayed());
     }
     @Then("users see options under the profile name.")

@@ -22,28 +22,29 @@ public class LoginPage {
 
     @FindBy(xpath = "//input[@class='login-btn']")
     public WebElement loginBtn;
+    @FindBy(xpath = "//div[@class='errortext']")
+    public WebElement IncortectLogin;
 
-    public void simpleLogin(String username){
+    public void simpleLogin(String username,String password){
 
         usernameBox.sendKeys(username);
-        passwordBox.sendKeys(ConfigReader.getProperty("password"));
+        passwordBox.sendKeys(password);
         loginBtn.click();
     }
 
     public void login(String user){
 
-       user = user.replace(" ", "_");
-       String username = ConfigReader.getProperty(user + "_username");
+        user = user.replace(" ", "_");
+        String username = ConfigReader.getProperty(user + "_username");
 
-       usernameBox.sendKeys(username);
-       passwordBox.sendKeys(ConfigReader.getProperty("password"));
+        usernameBox.sendKeys(username);
+        passwordBox.sendKeys(ConfigReader.getProperty("password"));
 
-       loginBtn.click();
+        loginBtn.click();
     }
 
     public void dynamicLogin(String user){
         user = user + ConfigReader.getProperty("dynamicUsername");
-        String username = ConfigReader.getProperty(user + "_username");
 
         usernameBox.sendKeys(user);
         passwordBox.sendKeys(ConfigReader.getProperty("password"));
