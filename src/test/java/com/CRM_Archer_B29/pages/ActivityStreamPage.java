@@ -32,4 +32,15 @@ public class ActivityStreamPage {
 
     @FindBy(xpath = "//button[@id='blog-submit-button-save']")
     public WebElement sendBtn;
+
+
+    @FindBy(xpath = "//span[@id='feed-add-post-form-link-text']")
+    public WebElement moreModule;
+
+    @FindBy(xpath="(//span[text()='Appreciation'])[2]")
+    public WebElement appreciationPopUp;
+
+    @FindBy(xpath="//body[@contenteditable='true']")
+    public WebElement messageContentBox;
+
 }

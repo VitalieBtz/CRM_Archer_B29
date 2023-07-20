@@ -1,24 +1,32 @@
 package com.CRM_Archer_B29.step_definitions;
 
+import com.CRM_Archer_B29.pages.ActivityStreamPage;
+import com.CRM_Archer_B29.utilities.Driver;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.Keys;
 
 public class AppreciationMessage_StepDefinition {
 
+    ActivityStreamPage activityStreamPage = new ActivityStreamPage();
 
     @Then("user clicks on MORE module")
     public void userClicksOnMOREModule() {
+        activityStreamPage.moreModule.click();
     }
 
 
     @And("user clicks Appreciation")
     public void userClicksAppreciation() {
+        activityStreamPage.appreciationPopUp.click();
     }
 
 
     @When("user enters {string} in Message Content which is a mandatory field.")
     public void userEntersInMessageContentWhichIsAMandatoryField(String message) {
+        activityStreamPage.messageContentBox.sendKeys(message);
+
     }
 
 
@@ -28,6 +36,8 @@ public class AppreciationMessage_StepDefinition {
 
     @Then("user clicks send button.")
     public void userClicksSendButton() {
+        activityStreamPage.sendBtn.click();
+
     }
 
     @And("verifies user can see the appreciation message under Activity Stream.")
