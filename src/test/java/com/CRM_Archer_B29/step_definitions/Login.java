@@ -1,5 +1,6 @@
 package com.CRM_Archer_B29.step_definitions;
 
+import com.CRM_Archer_B29.pages.HomePage;
 import com.CRM_Archer_B29.pages.LoginPage;
 import com.CRM_Archer_B29.utilities.Driver;
 import io.cucumber.java.en.Given;
@@ -8,6 +9,7 @@ import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 public class Login {
+    HomePage homePage=new HomePage();
     LoginPage loginPage = new LoginPage();
     @Given("user Login with  Invalid  {string} or {string}")
     public void user_login_with_invalid_or(String string, String string2) {
