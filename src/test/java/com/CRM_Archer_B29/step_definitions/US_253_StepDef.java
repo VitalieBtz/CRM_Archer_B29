@@ -126,6 +126,7 @@ public class US_253_StepDef {
         pollPage.answer2Button.clear();
     }
 
+
     @And("user verifies that user should be able to create a poll with  {string} {string} {string} and {string}")
     public void userVerifiesThatUserShouldBeAbleToCreateAPollWithAnd(String pollTitle, String question, String ans1, String ans2) {
 

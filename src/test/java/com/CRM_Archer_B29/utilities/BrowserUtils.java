@@ -96,6 +96,7 @@ public class BrowserUtils {
 
 
 
+
     public static void waitForVisibilityOfFLUENTWAIT(WebElement target) {
 
         Wait wait = new FluentWait(Driver.getDriver())

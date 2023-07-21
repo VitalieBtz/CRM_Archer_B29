@@ -51,3 +51,4 @@ Feature: Default
       | pollTitle | questionTitle | answer1 | answer2 |
       | samplePolltitle1 | sampleQuestiontitle1 | sampleAnswertitle1 | sampleAnswertitle2 |
 
+
