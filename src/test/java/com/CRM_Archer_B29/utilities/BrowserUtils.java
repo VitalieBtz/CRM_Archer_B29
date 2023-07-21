@@ -3,11 +3,12 @@ package com.CRM_Archer_B29.utilities;
 import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.FluentWait;
+import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.NoSuchElementException;
 import java.util.Set;
 
 public class BrowserUtils {
@@ -29,24 +30,6 @@ public class BrowserUtils {
         }
     }
 
-    public static void switchWindowAndVerify(String expectedInTitle) {
-
-        //Return and store all window handles in a Set.
-        Set<String> windowHandles = Driver.getDriver().getWindowHandles();
-
-        for (String eachWindowHandle : windowHandles) {
-
-            Driver.getDriver().switchTo().window(eachWindowHandle);
-
-            if (Driver.getDriver().getTitle().contains(expectedInTitle)) {
-                break;
-            }
-        }
-
-        String actualTitle = Driver.getDriver().getTitle();
-        Assert.assertTrue(actualTitle.contains(expectedInTitle));
-
-    }
     public static void switchWindowAndVerify(String expectedInUrl, String expectedInTitle) {
 
         //Return and store all window handles in a Set.
@@ -102,16 +85,23 @@ public class BrowserUtils {
         wait.until(ExpectedConditions.titleContains(title));
     }
 
-    public static WebElement waitForVisibility(WebElement element, int time) {
-        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(time));
-        return wait.until(ExpectedConditions.visibilityOf(element));
+    public static void waitForVisibilityOf(WebElement target) {
+        //Create the object of 'WebDriverWait' class, and set up the constructor args
+        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(10));
+
+        //use the 'wait' object with the proper syntax to create explicit wait conditions.
+        wait.until(ExpectedConditions.visibilityOf(target));
+
     }
 
-    public static List<String> getElementsText(List<WebElement> list) {
-        List<String> elemTexts = new ArrayList<>();
-        for (WebElement el : list) {
-            elemTexts.add(el.getText());
-        }
-        return elemTexts;
+
+    public static void waitForVisibilityOfFLUENTWAIT(WebElement target) {
+
+        Wait wait = new FluentWait(Driver.getDriver())
+                .withTimeout(Duration.ofSeconds(60))
+                .pollingEvery(Duration.ofSeconds(1))
+                .ignoring(NoSuchElementException.class);
+
+        wait.until(ExpectedConditions.visibilityOf(target));
     }
 }
