@@ -7,6 +7,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -16,8 +17,9 @@ public class Saras_Task {
     HomePage homePage=new HomePage();
     @Given("User click on send on message tab")
     public void user_click_on_send_on_message_tab() {
-        homePage.MessageTABE.click();
-        homePage.SendMessageBTN.click();
+        Driver.getDriver().findElement(By.id("feed-add-post-form-link-text")).click();
+        Driver.getDriver().findElement(By.xpath("//span[.='Appreciation']")).click();
+        Driver.getDriver().findElement(By.id("blog-submit-button-save")).click();
     }
     @Given("user send a message with no person or groups or department specified")
     public void user_send_a_message_with_no_person_or_groups_or_department_specified() {
@@ -26,14 +28,24 @@ Driver.getDriver().findElement(By.xpath("//span[@class='feed-add-post-del-but']"
     }
     @Then("User see all employees by default")
     public void user_see_all_employees_by_default() {
-Assert.assertTrue(Driver.getDriver().findElement(By.id("UA")).isDisplayed());
+Assert.assertTrue(Driver.getDriver().findElement(By.xpath("//span[@class='feed-add-post-destination feed-add-post-destination-all-users']")).isDisplayed());
     }
     @Given("user Send a message")
     public void user_send_a_message() {
+        WebElement Fram=Driver.getDriver().findElement(By.xpath("//iframe[@class='bx-editor-iframe']"));
+        Driver.getDriver().switchTo().frame(Fram);
+        BrowserUtils.sleep(5);
+        Driver.getDriver().findElement(By.xpath("//body[@contenteditable='true']")).sendKeys("adadad");
+        Driver.getDriver().switchTo().defaultContent();
+        BrowserUtils.sleep(4);
+
 
     }
     @Then("user should be able to cancel anytime")
     public void user_should_be_able_to_cancel_anytime() {
+        Driver.getDriver().findElement(By.id("blog-submit-button-cancel")).click();
+        Assert.assertTrue(Driver.getDriver().findElement(By.id("blog-submit-button-save")).isDisplayed());
+
 
     }
     @Then("User should see {string} Error message")
