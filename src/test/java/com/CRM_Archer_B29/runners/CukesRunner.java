@@ -7,7 +7,7 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
 
-        tags = "@B29G6-285",
+        tags = "@B29G6-269",
         dryRun = false,
         features = "src/test/resources/features",
         glue = "com/CRM_Archer_B29/step_definitions",
