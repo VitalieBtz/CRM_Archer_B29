@@ -1,5 +1,5 @@
 @B29G6-272 @smoke
-Feature: Default
+Feature: As a user, I want to access the Employees page.
 
 
   Background:User on login page

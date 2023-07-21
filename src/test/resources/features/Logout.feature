@@ -1,5 +1,5 @@
 @B29G6-295 @smoke
-Feature: Default
+Feature: Logout feature
 
   Background:
 		#@B29G6-294

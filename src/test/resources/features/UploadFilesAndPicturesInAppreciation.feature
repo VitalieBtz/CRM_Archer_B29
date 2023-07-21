@@ -1,4 +1,4 @@
-@B29G6-327
+@B29G6-327 @smoke
 Feature: As a user, I should be able to upload files and pictures while sending appreciation.
 
 		#@B29G6-288

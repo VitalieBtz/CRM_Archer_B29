@@ -24,14 +24,18 @@ public class samiUs250StepDef extends LoginPage {
     public void user_clicks_on_Employees() {
 
         employeesPage.employees.click();
-
     }
 
     @Then("user should be able to see following modules")
-    public void user_should_be_able_to_see_following_modules(List<String> expectedModules) throws AWTException {
+    public void user_should_be_able_to_see_following_modules(List<String> expectedModules) {
 
         for(int i=0; i<3; i++){
-            Robot robot = new Robot();
+            Robot robot = null;
+            try {
+                robot = new Robot();
+            } catch (AWTException e) {
+                throw new RuntimeException(e);
+            }
             robot.keyPress(KeyEvent.VK_CONTROL);
             robot.keyPress(KeyEvent.VK_MINUS);
             robot.keyRelease(KeyEvent.VK_CONTROL);
