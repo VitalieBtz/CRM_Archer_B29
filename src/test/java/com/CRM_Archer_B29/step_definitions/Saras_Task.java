@@ -43,8 +43,11 @@ Assert.assertTrue(Driver.getDriver().findElement(By.xpath("//span[@class='feed-a
     }
     @Then("user should be able to cancel anytime")
     public void user_should_be_able_to_cancel_anytime() {
-        Driver.getDriver().findElement(By.id("blog-submit-button-cancel")).click();
-        Assert.assertTrue(Driver.getDriver().findElement(By.id("blog-submit-button-save")).isDisplayed());
+        WebElement C=Driver.getDriver().findElement(By.id("blog-submit-button-cancel"));
+        C.click();
+        BrowserUtils.sleep(1);
+        Assert.assertFalse(C.isDisplayed());
+
 
 
     }
