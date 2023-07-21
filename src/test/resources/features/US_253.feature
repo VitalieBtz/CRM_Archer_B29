@@ -34,8 +34,6 @@ Feature: Default
       | pollTitle | questionTitle | answer1 | answer2 |
       | samplePolltitle1 | sampleQuestiontitle1 | sampleAnswertitle1 | sampleAnswertitle2 |
 
-
-
   @B29G6-280
   Scenario Outline: B29G6-253 Poll functionality error messages and validations happy path
     Given user is on the login page for poll
