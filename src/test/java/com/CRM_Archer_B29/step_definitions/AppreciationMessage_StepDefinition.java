@@ -43,7 +43,11 @@ public class AppreciationMessage_StepDefinition {
 
     @Then("user clicks send button.")
     public void userClicksSendButton() {
+        BrowserUtils.waitForVisibility(activityStreamPage.appreciationPopUp,2);
+
+
         activityStreamPage.sendBtn.click();
+
 
     }
     @And("verifies user can see {string} which is the appreciation message under Activity Stream.")
@@ -57,6 +61,7 @@ public class AppreciationMessage_StepDefinition {
 
     @Then("user does not choose any recipient in To field which is a mandatory field")
     public void userDoesNotChooseAnyRecipientInToFieldWhichIsAMandatoryField() {
+        
     }
 
     @Then("user verifies that mandatory field error message:Please specify at least one person")
@@ -69,18 +74,35 @@ public class AppreciationMessage_StepDefinition {
 
     @And("user verifies that mandatory field error message:The message title is not specified")
     public void userVerifiesThatMandatoryFieldErrorMessageTheMessageTitleIsNotSpecified() {
+        String expectedText = "The message title is not specified";
+        WebElement errorMessageTitle=Driver.getDriver().findElement(By.cssSelector(".feed-add-error"));
+        String actualText = errorMessageTitle.getText();
+        Assert.assertEquals(actualText, expectedText,"Error Message title is not shown as expected");
+
     }
 
     @And("user verifies that the delivery should be to All employees by default.")
     public void userVerifiesThatTheDeliveryShouldBeToAllEmployeesByDefault() {
+        WebElement allEmployees = Driver.getDriver().findElement(By.cssSelector(".feed-add-post-destination-text"));
+        Assert.assertTrue(allEmployees.isDisplayed());
     }
 
     @Then("user clicks cancel button")
     public void userClicksCancelButton() {
+        Driver.getDriver().switchTo().parentFrame();
+        WebElement cancelBtn = Driver.getDriver().findElement(By.cssSelector("#blog-submit-button-cancel"));
+        cancelBtn.click();
+
+
+
     }
 
     @And("user verifies that user should be able to cancel sending appreciation at any time before sending.")
     public void userVerifiesThatUserShouldBeAbleToCancelSendingAppreciationAtAnyTimeBeforeSending() {
+
+        WebElement msgContent = Driver.getDriver().findElement(By.xpath("//body[@contenteditable='true']"));
+        BrowserUtils.sleep(2);
+        Assert.assertFalse(msgContent.isDisplayed());
     }
 
 
