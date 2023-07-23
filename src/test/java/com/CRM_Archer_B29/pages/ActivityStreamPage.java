@@ -33,6 +33,9 @@ public class ActivityStreamPage {
     @FindBy(xpath = "//button[@id='blog-submit-button-save']")
     public WebElement sendBtn;
 
+    @FindBy(xpath = "(//button[text()='Send'])[3]")
+    public WebElement sendBtn1;
+
 
     @FindBy(xpath = "//span[@id='feed-add-post-form-link-text']")
     public WebElement moreModule;
@@ -40,7 +43,6 @@ public class ActivityStreamPage {
     @FindBy(xpath="//span[.='Appreciation']")
     public WebElement appreciationPopUp;
 
-    @FindBy(xpath="//body[@contenteditable='true']")
-    public WebElement messageContentBox;
+
 
 }

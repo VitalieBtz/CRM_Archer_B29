@@ -13,10 +13,12 @@ import org.openqa.selenium.WebElement;
 
 public class AppreciationMessage_StepDefinition {
 
+
     ActivityStreamPage activityStreamPage = new ActivityStreamPage();
 
     @Then("user clicks on MORE module")
     public void userClicksOnMOREModule() {
+        BrowserUtils.sleep(2);
         activityStreamPage.moreModule.click();
     }
 
@@ -30,22 +32,33 @@ public class AppreciationMessage_StepDefinition {
 
     @When("user enters {string} in Message Content which is a mandatory field.")
     public void userEntersInMessageContentWhichIsAMandatoryField(String message) {
-        Driver.getDriver().switchTo().frame(Driver.getDriver().findElement(By.xpath("//iframe[@class='bx-editor-iframe']")));
-        activityStreamPage.messageContentBox.sendKeys(message);
+        BrowserUtils.sleep(2);
+        WebElement iframe = Driver.getDriver().findElement(By.xpath("//iframe[@class='bx-editor-iframe']"));
+        //Driver.getDriver().switchTo().frame(0);
+        Driver.getDriver().switchTo().frame(iframe);
+        BrowserUtils.sleep(2);
+
+
+
+        BrowserUtils.sleep(2);
+
+
+        Driver.getDriver().switchTo().defaultContent();
+
 
     }
 
-
     @Then("user choose recipient in To field which is a mandatory field")
     public void userChooseRecipientInToFieldWhichIsAMandatoryField() {
+
 
     }
 
     @Then("user clicks send button.")
     public void userClicksSendButton() {
-        BrowserUtils.waitForVisibility(activityStreamPage.appreciationPopUp,2);
+        //BrowserUtils.waitForVisibility(activityStreamPage.appreciationPopUp,2);
 
-
+        BrowserUtils.sleep(2);
         activityStreamPage.sendBtn.click();
 
 

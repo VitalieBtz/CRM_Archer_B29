@@ -10,7 +10,7 @@ Feature: Appreciation message functionality
   Background:
     Given user is on the login page
 
-
+  @wip1
   Scenario Outline: US254_TC1_a_User should be able to send an appreciation by filling in the mandatory fields.
     When User enters a valid "<username>" and "<password>"
     And User clicks login button
@@ -18,8 +18,8 @@ Feature: Appreciation message functionality
     Then user clicks on MORE module
     And user clicks Appreciation
 
-    #When user enters "hello" in Message Content which is a mandatory field.
-    #Then user choose recipient in To field which is a mandatory field
+    When user enters "hello" in Message Content which is a mandatory field.
+   # Then user choose recipient in To field which is a mandatory field
     #Then user clicks send button.
     #And verifies user can see "hello" which is the appreciation message under Activity Stream.
     Examples:
@@ -67,7 +67,7 @@ Feature: Appreciation message functionality
       | hr3@cybertekschool.com        | UserUser |
 
 
-@wip1
+
   Scenario Outline: US254_TC3_User should be able to cancel sending appreciation at any time before sending.
     When User enters a valid "<username>" and "<password>"
     And User clicks login button
