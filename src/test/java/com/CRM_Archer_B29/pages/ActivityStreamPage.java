@@ -33,15 +33,31 @@ public class ActivityStreamPage {
     @FindBy(xpath = "//button[@id='blog-submit-button-save']")
     public WebElement sendBtn;
 
-    @FindBy(xpath = "(//button[text()='Send'])[3]")
-    public WebElement sendBtn1;
-
 
     @FindBy(xpath = "//span[@id='feed-add-post-form-link-text']")
     public WebElement moreModule;
 
     @FindBy(xpath="//span[.='Appreciation']")
     public WebElement appreciationPopUp;
+
+    @FindBy(xpath = "//body[@contenteditable='true']")
+    public WebElement appreciationMessageContent;
+
+    @FindBy(xpath = "//span[.='The message title is not specified']")
+    public WebElement errorMessageTitle;
+
+    @FindBy(xpath = "//span[.='All employees']")
+    public WebElement allEmployeesDefault;
+
+    @FindBy(xpath = "//span[@class='feed-add-post-del-but']")
+    public WebElement allEmployeesRemove;
+
+    @FindBy(xpath = "//span[.='Please specify at least one person.']")
+    public WebElement errorMessagePerson;
+
+    @FindBy(xpath = "//button[@id='blog-submit-button-cancel']")
+    public WebElement cancelBtn;
+
 
 
 
