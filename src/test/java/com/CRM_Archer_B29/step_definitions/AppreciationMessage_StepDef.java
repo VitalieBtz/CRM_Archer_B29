@@ -72,7 +72,7 @@ public class AppreciationMessage_StepDef {
     @And("verifies user can see {string} which is the appreciation message under Activity Stream.")
     public void verifiesUserCanSeeWhichIsTheAppreciationMessageUnderActivityStream(String message) {
 
-        Assert.assertTrue(Driver.getDriver().findElement(By.xpath("//div[.='"+message+"']")).isDisplayed());
+        Assert.assertTrue(Driver.getDriver().findElement(By.xpath("//div[.='"+message+"']")).isDisplayed());//dynamic appreciation message
 
     }
 
