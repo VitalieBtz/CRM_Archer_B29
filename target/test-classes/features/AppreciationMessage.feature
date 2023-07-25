@@ -22,7 +22,7 @@ Feature: Default
 		      | helpdesk3@cybertekschool.com  | UserUser |
 		      | marketing3@cybertekschool.com | UserUser |
 
-	
+
 	@B29G6-334
 	Scenario Outline: US254_TC1_b_Verify user should be able to send an appreciation by filling in the mandatory fields.
 		When User enters a valid "<username>" and "<password>"

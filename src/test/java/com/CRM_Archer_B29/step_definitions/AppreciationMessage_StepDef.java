@@ -89,7 +89,8 @@ public class AppreciationMessage_StepDef {
 
     @And("user verifies that user should be able to cancel sending appreciation at any time before sending.")
     public void userVerifiesThatUserShouldBeAbleToCancelSendingAppreciationAtAnyTimeBeforeSending() {
-        Assert.assertTrue(activityStreamPage.cancelBtn.isEnabled());
+        BrowserUtils.waitForVisibility(activityStreamPage.messageContentAfterCanceling, 2);
+        Assert.assertTrue(activityStreamPage.messageContentAfterCanceling.isDisplayed());
 
     }
 }

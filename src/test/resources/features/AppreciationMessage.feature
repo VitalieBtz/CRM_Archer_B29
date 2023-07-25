@@ -5,7 +5,6 @@ Feature: Default
 		Given user is on the login page
 		
 
-	#passed
 	@B29G6-333
 	Scenario Outline: US254_TC1_a_Verify user should be able to send an appreciation by filling in the mandatory fields.
 		When User enters a valid "<username>" and "<password>"
