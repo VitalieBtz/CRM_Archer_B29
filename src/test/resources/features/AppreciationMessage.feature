@@ -1,5 +1,5 @@
 @B29G6-339
-Feature: Default
+Feature: Appreciation Message Functionality
 
 	Background:
 		Given user is on the login page
@@ -52,8 +52,8 @@ Feature: Default
 		    And verifies user can see "hi team!" which is the appreciation message under Activity Stream.
 		    Examples:
 		       | username                      | password |
-		       #| hr3@cybertekschool.com        | UserUser |
-		       #| helpdesk3@cybertekschool.com  | UserUser |
+		       | hr3@cybertekschool.com        | UserUser |
+		       | helpdesk3@cybertekschool.com  | UserUser |
 		       | marketing3@cybertekschool.com | UserUser |
 
 
