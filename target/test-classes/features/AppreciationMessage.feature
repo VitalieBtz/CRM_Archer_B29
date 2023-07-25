@@ -19,10 +19,10 @@ Feature: Default
 		    Examples:
 		      | username                      | password |
 		      | hr3@cybertekschool.com        | UserUser |
-		     # | helpdesk3@cybertekschool.com  | UserUser |
-		      #| marketing3@cybertekschool.com | UserUser |
+		      | helpdesk3@cybertekschool.com  | UserUser |
+		      | marketing3@cybertekschool.com | UserUser |
 
-	#passed
+	
 	@B29G6-334
 	Scenario Outline: US254_TC1_b_Verify user should be able to send an appreciation by filling in the mandatory fields.
 		When User enters a valid "<username>" and "<password>"
@@ -37,10 +37,10 @@ Feature: Default
 		    Examples:
 		      | username                      | password |
 		      | hr3@cybertekschool.com        | UserUser |
-		     # | helpdesk3@cybertekschool.com  | UserUser |
-		      #| marketing3@cybertekschool.com | UserUser |
+		      | helpdesk3@cybertekschool.com  | UserUser |
+		      | marketing3@cybertekschool.com | UserUser |
 
-	
+
 	@B29G6-335
 	Scenario Outline: US254_TC1_c_Verify user should be able to send an appreciation by filling in the mandatory fields.
 		When User enters a valid "<username>" and "<password>"
@@ -48,16 +48,16 @@ Feature: Default
 		    Then User should land on a home page
 		    Then user clicks on MORE module
 		    And user clicks Appreciation
-		    When user enters "test" in Message Content which is a mandatory field.
+		    When user enters "hi team!" in Message Content which is a mandatory field.
 		    Then user clicks send button.
-		    And verifies user can see "test" which is the appreciation message under Activity Stream.
+		    And verifies user can see "hi team!" which is the appreciation message under Activity Stream.
 		    Examples:
-		      | username                      | password |
-		      | hr3@cybertekschool.com        | UserUser |
-		     # | helpdesk3@cybertekschool.com  | UserUser |
-		    #  | marketing3@cybertekschool.com | UserUser |
+		       | username                      | password |
+		       #| hr3@cybertekschool.com        | UserUser |
+		       #| helpdesk3@cybertekschool.com  | UserUser |
+		       | marketing3@cybertekschool.com | UserUser |
 
-	#passed
+
 	@B29G6-336
 	Scenario Outline: US254_TC2_Verify the delivery should be to 'All employees' by default.
 		When User enters a valid "<username>" and "<password>"
@@ -71,6 +71,7 @@ Feature: Default
 		      | hr3@cybertekschool.com        | UserUser |
 		      | helpdesk3@cybertekschool.com  | UserUser |
 		      | marketing3@cybertekschool.com | UserUser |
+
 
 
 	@B29G6-337

@@ -72,7 +72,8 @@ public class Driver {
     /*
     Create a new Driver.closeDriver(); it will use .quit() method to quit browsers, and then set the driver value back to null.
      */
-    public static void closeDriver(){
+   public static void closeDriver(){
+
 
         if (driverPool.get() != null){
             /*
@@ -84,5 +85,6 @@ public class Driver {
              */
             driverPool.remove();
         }
-    }
+  }
+
 }

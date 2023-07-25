@@ -7,6 +7,8 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 
 public class AppreciationMessage_StepDef {
 
@@ -37,8 +39,9 @@ public class AppreciationMessage_StepDef {
 
     @Then("user clicks send button.")
     public void userClicksSendButton() {
-        activityStreamPage.sendBtn.click();
         BrowserUtils.waitForVisibility(activityStreamPage.sendBtn, 2);
+        activityStreamPage.sendBtn.click();
+
     }
 
     @And("user verifies that mandatory field error message:The message title is not specified")
@@ -69,6 +72,8 @@ public class AppreciationMessage_StepDef {
     @And("verifies user can see {string} which is the appreciation message under Activity Stream.")
     public void verifiesUserCanSeeWhichIsTheAppreciationMessageUnderActivityStream(String message) {
 
+        Assert.assertTrue(Driver.getDriver().findElement(By.xpath("//div[.='"+message+"']")).isDisplayed());
+
     }
 
     @And("user verifies that the delivery should be to All employees by default.")
@@ -78,13 +83,13 @@ public class AppreciationMessage_StepDef {
 
     @Then("user clicks cancel button")
     public void userClicksCancelButton() {
-        activityStreamPage.cancelBtn.click();
         BrowserUtils.waitForVisibility(activityStreamPage.cancelBtn, 2);
-        Driver.getDriver().switchTo().defaultContent();
+        activityStreamPage.cancelBtn.click();
     }
 
     @And("user verifies that user should be able to cancel sending appreciation at any time before sending.")
     public void userVerifiesThatUserShouldBeAbleToCancelSendingAppreciationAtAnyTimeBeforeSending() {
+        Assert.assertTrue(activityStreamPage.cancelBtn.isEnabled());
 
     }
 }
