@@ -12,5 +12,6 @@ public class LoginPC_StepDef {
     @Given("user is on the login page")
     public void user_is_on_the_login_page() {
         Driver.getDriver().get(ConfigReader.getProperty("environment"));
+
     }
 }

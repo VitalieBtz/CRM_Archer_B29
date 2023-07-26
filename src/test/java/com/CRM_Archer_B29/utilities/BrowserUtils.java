@@ -2,6 +2,7 @@ package com.CRM_Archer_B29.utilities;
 
 import org.junit.Assert;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -81,4 +82,12 @@ public class BrowserUtils {
         //use the 'wait' object with the proper syntax to create explicit wait conditions.
         wait.until(ExpectedConditions.titleContains(title));
     }
+
+    public static WebElement waitForVisibility(WebElement element, int time) {
+        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(time));
+        return wait.until(ExpectedConditions.visibilityOf(element));
+    }
+
+
+
 }
