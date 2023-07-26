@@ -19,10 +19,6 @@ public class FilesAndImages_StepDef {
     LoginPage loginPage = new LoginPage();
 
     MessageModulePage messageModulePage = new MessageModulePage();
-    @Given("{string} Login with valid credentials")
-    public void loginWithValidCredentials(String user) {
-        loginPage.dynamicLogin(user);
-    }
     
     @And("User clicks on the Messages button")
     public void userClicksOnTheMessagesButton() {
